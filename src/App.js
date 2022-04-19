@@ -1,25 +1,26 @@
-import "./App.css";
+import styled from "styled-components";
+import wallpaper from "./wallpaper.jpg";
 
-import { Switch, Route } from "react-router-dom";
+export const Main = styled.main`
+  background-image: url(${wallpaper});
+  background-size: contain;
 
-import Form from "./pages/Form";
-import Home from "./pages/Home";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-function App() {
-  return (
-    <div className="App">
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <Form />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-        </Switch>
-      </main>
-    </div>
-  );
-}
+  width: 100vw;
+  height: 100vh;
+`;
 
-export default App;
+export const StyledButton = styled.button`
+  background-color: #ffffff9a;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #792379;
+`;
